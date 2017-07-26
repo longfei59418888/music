@@ -1,0 +1,21 @@
+@import "mixin";
+@import "common";
+.tab{
+    position: absolute;bottom: 0;height: 1rem;width: 100%;left: 0;z-index: 99999;
+    .bg{position: absolute;height: 100%;width: 100%;background-color: #111;opacity: .99;
+        -webkit-filter: blur(1px); /* Chrome, Opera */-moz-filter: blur(1px);  -ms-filter: blur(1px);  filter: blur(1px);  }
+    .tab-box{position: relative;z-index: 2;
+        @extend .flex-mixin-center;
+        >div{@include flexNum(1);text-align: center;opacity: .6;
+            i{background-image: url("../image/icon/tab-find.png");height: .48rem;width: .48rem;margin-top: .05rem;}
+            a{color: #fff;font-size: 0;line-height: 1;
+                p{font-size: .20rem;}
+            }
+            &.active{  opacity: 1;}
+            &.tab-mine{ i{background-image: url("../image/icon/tab-mine.png");} }
+            &.tab-info{ i{background-image: url("../image/icon/tab-info.png");} }
+            &.tab-setting{ i{background-image: url("../image/icon/tab-setting.png");} }
+        }
+
+    }
+}

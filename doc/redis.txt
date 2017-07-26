@@ -1,0 +1,48 @@
+
+
+npm install hiredis redis
+
+var redis = require('redis')
+
+
+//创建并连接redis服务器,
+//auth_pass  ==  密码
+client = redis.createClient(port,host,{auth_pass:RDS_PWD});
+client.on('ready',(err)=>{
+	console.log(err)
+})
+
+连接到redis服务器，可以看出我们并没有输入密码进行验证的过程就成功连接到了服务器，因为redis服务器默认不需要密码，
+不过这不太安全，我们肯定要设置一下密码打开redis.conf文件，找到requirepass，取消注释，设置密码为:porschev
+
+
+
+
+
+//set和get方法
+client.set(key,value,fn)
+client.get(key)
+
+//hmset和hgetall
+clent.hmset(hash,obj,fn)
+clent.hmset(hash,fn)
+
+//失效时间
+client.expire(key, 3);
+//删除
+client.del('key1'[, 'key2', ...])
+//检测是否存在
+client.exists('key')
+//设置过期时间
+client.expire('key', seconds)
+
+
+
+
+
+
+
+
+
+
+

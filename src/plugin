@@ -1,0 +1,63 @@
+
+1.slide
+vue-carousel
+    vue-carousel-3d
+Vue-Awesome-Swiper
+
+
+2.charts
+vue-charts
+
+
+3.map
+vue-baidu-map
+
+
+4.calender
+vue-calendar-picker
+vue-smooth-picker (时间，日期，其他)
+vue-datepicker
+
+
+
+5.video
+vue-dplayer
+
+
+6.select
+vue-select
+
+7.地区选择
+v-distpicker
+
+8.滑块
+vue-slider-component
+
+9.图片上传裁剪
+vue-core-image-upload
+
+10.富文本
+vue-quill-editor
+
+vue-infinite-scroll
+4.滚动
+betterscroll
+vue-scroller
+onRefresh:刷新回调
+onInfinite:加载回调
+refreshText:刷新文字
+noDataText:没有数据文字
+_this.$refs.my_scroller.resize()  //重新计算高度
+_this.$refs.my_scroller.triggerPullToRefresh()  //出发刷新
+_this.$refs.my_scroller.finishPullToRefresh()  //完成刷新
+_this.$refs.my_scroller.finishInfinite(false/true)  //false:可以无限滚动，true禁止无限滚动
+_this.$refs.my_scroller.scrollTo()
+_this.$refs.my_scroller.scrollBy()
+_this.$refs.my_scroller.getPosition ()   //位置
+
+
+
+
+
+Vue Material
+muse-ui

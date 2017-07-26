@@ -1,0 +1,81 @@
+.bg{opacity: .9;z-index: 1;
+  &:before{content: '';height: 100%;width: 100%;position: absolute;left: 0;top: 0;background: rgba(0,0,0,.5);z-index: 2}
+  position: absolute;width: 100%;height: 100%;background-size:  auto 100%;z-index: 10000;background-repeat: no-repeat;
+  background-position: center;  -webkit-filter: blur(40px); filter: blur(40px);
+}
+@keyframes myfirst
+{
+  from {-webkit-transform: rotate(0);   transform: rotate(0);}
+  to {-webkit-transform: rotate(360deg);   transform: rotate(360deg);}
+}
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+  from {-webkit-transform: rotate(0);   transform: rotate(0);}
+  to {-webkit-transform: rotate(360deg);   transform: rotate(360deg);}
+}
+
+
+.h-i{i{background-image: url("../../image/icon/share-music.png")!important;}}
+.play-box{position: relative;padding-top: 1.5rem;
+  .option{position: absolute;left: 50%;top: 0rem;margin-left: -.44rem;z-index: 99;
+    img:nth-child(2){
+      -webkit-transition: all .4s;  -moz-transition: all .4s;  -ms-transition: all .4s;  -o-transition: all .4s;  transition: all .4s;
+      -webkit-transform-origin: .27rem 0;   -webkit-transform: rotate(-2deg);   transform: rotate(-2deg);
+      transform-origin: .27rem 0;
+      &.active{
+        -webkit-transform: rotate(-25deg);   transform: rotate(-25deg);
+      }
+    }
+
+  }
+  .play-music{  width: 5.92rem;margin: 0 auto;height: 5.92rem;border-radius: 100%;
+    background: url(../../image/icon/disc_default.png);background-size: 100% 100%;
+    .music-img{width: 100%;height: 100%;background: url(../../image/icon/disc-ip6.png);background-size: 100% 100%;
+     img{
+       -webkit-transform-origin: center ;    transform-origin: center;
+       animation: myfirst 11s linear infinite;
+       -webkit-animation: myfirst 11s linear infinite;	/* Safari 和 Chrome */
+     }
+      &.stop{
+        img{
+          animation-play-state:paused;
+          -webkit-animation-play-state:paused; /* Safari 和 Chrome */
+        }
+      }
+    }
+  }
+}
+.remove-action{
+  animation: none;
+  -webkit-animation: none;	/* Safari 和 Chrome */
+}
+.option-music{  position: absolute;bottom: 0;width: 100%;left: 0;
+  .option-top{height: .6rem;padding: 0 .3rem;
+    p{height: .6rem;} img{width: .48rem;}
+  }
+  .option-center{  height: .8rem;display: flex;line-height: .8rem;color: #fff;padding: 0 .1rem;
+    .option-proccess{flex: 1;padding: 0 .1rem 0 .2rem;
+      div{display: inline-block;height: 2px;width: 100%;background: #fff;position: relative;top: -3px;opacity: .6;border-radius: 2px;
+        p{height: 2px;width: 50%;background: #D33C33;position: relative;  -webkit-transition: width 0s;  -moz-transition: width 0s;  -ms-transition: width 0s;  -o-transition: width 0s;  transition: width 0s;
+          span{display: inline-block;position: absolute;right: -5px;top: -5px;height: 12px;
+            width: 12px;background: #fff;border-radius: 100%;line-height: 12px;  display: flex;  align-items:center;  justify-content:center;
+            //i{display: inline-block;height: 3px;width: 3px;background: #D33C33;border-radius: 100%;}
+          }
+        }
+      }
+    }
+  }
+  .option-bottom{display: flex;margin-top: .4rem;margin-bottom: .3rem;
+    .center{flex: 1;display: flex; img{width: .56rem;}padding: 0 .4rem;
+      .pre{width: 1.2rem;align-items: center;justify-content: center;display: flex;}
+      .played{flex: 1;align-items: center;justify-content: center;display: flex;
+        img{width: .88rem;}
+      }
+      .next{width: 1.2rem;align-items: center;justify-content: center;display: flex;}
+    }
+    .slide{  width: 1.2rem;align-items: center;justify-content: center;display: flex;
+      img{width: .48rem;opacity: .7;}
+    }
+  }
+
+}

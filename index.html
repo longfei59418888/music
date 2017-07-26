@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telephone=no" />
+    <title>天听音乐</title>
+  </head>
+  <style>
+    body,html{margin: 0;width: 100%;height: 100%;position: relative;font-size: .32rem;overflow: hidden}
+    p,ul,li{margin: 0;padding: 0;list-style: none}
+    .container{width: 100%;height: 100%;}
+    .child-view {
+      position: absolute;
+      width:100%;
+      top: 0;
+      bottom: 0;
+      -webkit-overflow-scrolling: touch; /* ios5+ */
+      -webkit-transition: -webkit-transform .5s cubic-bezier(.55,0,.1,1);
+      transition: transform .5s cubic-bezier(.55,0,.1,1);
+    }
+    .slide-no-enter,.slide-no-leave-active {
+      -webkit-transition: -webkit-transform 0s;  transition: trnsform 0s;  -webkit-transform: translate(0, 0);  transform: translate(0, 0);  }
+    .slide-left-enter, .slide-right-leave-active {
+      -webkit-transform: translate(100%, 0);  transform: translate(100%, 0);  }
+    .slide-left-leave-active, .slide-right-enter {
+      -webkit-transform: translate(-100%, 0);  transform: translate(-100%, 0);  }
+    .carousel-3d-container{margin: 0!important;}
+    .carousel-3d-slide{border: none !important;position: relative}
+    .carousel-3d-slide p{position: absolute;bottom: .3rem;left: .7rem;font-size: .32rem;letter-spacing: 2px;text-shadow: 0 0 0 #aaa;
+    color: #888;}
+  </style>
+  <script>
+      var deviceWidth = document.documentElement.clientWidth;
+      if(deviceWidth > 640) deviceWidth = 640;
+      document.documentElement.style.fontSize = deviceWidth /(7.5) + 'px';
+      var WEB_CONFIG={
+          web_url:'',
+          web_netConnect:'',
+          web_version:'0.0.1  ',
+          web_debug_url:'',
+          web_font:deviceWidth /(100*7.5),
+          web_height:document.documentElement.clientHeight,
+          web_width:document.documentElement.clientWidth
+      }
+      var re_misic_audio_config = {
+          volume:0.5,
+          currentTime:0,
+          musicInfo:{},
+          musicList:[],
+          hash:'',
+          index:1,
+          mode:3,
+          isPlay:false,
+      }
+  </script>
+  <body>
+    <div class="container">
+      <div id="app"></div>
+    </div>
+    <div controls="controls" style="height: 0;width: 0;position: absolute;left: 9999999px;">
+      <audio id="re_misic_audio">
+        <source src="" type="audio/ogg">
+        <source src="" type="audio/mpeg">
+      </audio>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

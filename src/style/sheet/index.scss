@@ -1,0 +1,25 @@
+.top-box{  height: 4.5rem;position: absolute;top: 0;left: 0;width: 100%;overflow: hidden;
+  .box{position: relative;z-index: 8;margin-top: 1.35rem;padding:.3rem .3rem 0;height: 3.1rem;padding-left: 3.2rem;
+    .left{width: 2.5rem;position: absolute;height: 2.5rem;top: .3rem;left: .3rem;
+      img{width: 100%;}
+    }
+    .right{
+      >p{font-size: .32rem;color: #fff;margin-top: .32rem;line-height: .48rem;height: 0.48rem;overflow: hidden}
+      >span{display: inline-block;color: #fff;margin-top: .14rem;
+        img{display: inline-block;width: .24rem;position: relative;top: .02rem;margin-right: .06rem;}
+      }
+      >div{
+        p{height: .52rem;line-height: .52rem;color: #fff;display: inline-block;border: 1px solid #D1C9D1;font-size: .2rem;
+          padding: 0 .2rem;border-radius: .25rem;margin-top: .4rem;
+          img{width: .32rem;margin-right: .1rem;position: relative;top: .11rem;}
+        }
+      }
+    }
+  }
+  >p{padding: 0 .3rem;color: #eee;position: relative;z-index: 10;line-height: .36rem;height: .72rem;overflow: hidden;
+    img{width: .32rem;margin-right: .1rem;position: relative;top: .04rem;opacity: .2}
+  }
+  .bg2{position: absolute;height: 100%;width: 100%;left: 0;top: 0;background: rgba(0,0,0,.7);}
+  .bg{position: absolute;height: 100%;width: 100%;background-size: 100% 100%;background-repeat: no-repeat;left: 0;top: 0;
+    z-index: 2;  -webkit-filter: blur(30px); /* Chrome, Opera */-moz-filter: blur(30px);  -ms-filter: blur(30px);  filter: blur(30px);}
+}

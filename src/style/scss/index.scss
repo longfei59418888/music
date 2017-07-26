@@ -1,0 +1,104 @@
+@import "../mixin";
+@import "../common";
+.header-index{height: 1.35rem;background: #D33C33;width: 100%;padding-top: .45rem;  display: flex;position: relative;z-index: 10;
+  .title{flex: 1;display: flex;align-items:center;  justify-content:center;font-size: .36rem;color: #fff;}
+  .music-title{line-height: 1;text-align: center;flex: 1;font-size: .30rem;color: #fff;margin-top: .15rem;
+    span{font-size: .22rem;display: inline-block;margin-top: .1rem;color: #ccc}
+  }
+  .h-scan{width: 1.24rem;  display: flex;  align-items:center;  justify-content:center;
+    i{height: .48rem;width: .48rem;display: inline-block;background-image: url("../../image/icon/h-sao.png")}
+  }
+  .search{flex: 1;
+    span{display: block;height: .56rem;margin: .17rem auto;background: #fff;border-radius: .08rem;
+      display: flex;  align-items:center;  justify-content:center;color: #ccc;
+      i{display: inline-block;background: url("../../image/icon/h-search.png");height: .32rem;width: .32rem;background-size: 100% 100%;margin-right: .05rem}
+    }
+  }
+  .h-i{width: 1.24rem;  display: flex;  align-items:center;  justify-content:center;
+    i{height: .48rem;width: .48rem;display: inline-block;background-image: url("../../image/icon/h-music.png")}
+  }
+}
+.scroller{
+  top: 0!important;bottom: 0 !important;position: absolute;width: 100%;z-index: 999999;background: #fff;
+  &.hidden-bottom{bottom: 0}
+  .banner{padding: 0;overflow: hidden;position: relative;
+    .bg{position: absolute;height: 100%;width: 100%;top: 0;left: 0;
+      -webkit-filter: blur(1px); /* Chrome, Opera */-moz-filter: blur(1px);  -ms-filter: blur(1px);  filter: blur(1px);}
+  }
+  .dots{text-align: center;position: relative;z-index: 10;margin-top: .2rem;
+    span{width: 5px;height: 5px;display: inline-block;background: #ccc;margin: .1rem .09rem;border-radius: 100%;
+      &.active{width: 10px;border-radius: 5px;background: #aaa;}
+    }
+  }
+  .banner-nav{
+    overflow: hidden;padding: 0 .1rem;padding-top: .1rem;
+    >div{height: 1.75rem;width: 33.33%;float: left;
+      .banner-nav-box{text-align: center;
+        >div{height: 1rem;width: 1rem;display: inline-block;border: 1px solid #D43B33;border-radius: 100%;
+          img{height: .48rem;width: .48rem;display: inline-block;margin-top: .26rem;}
+        }
+        p{font-size: .24rem;color: #3D3E3F;margin-top: .15rem;}
+      }
+    }
+  }
+  .index-gedan{
+    border-top: 1px solid #f4f4f4;padding: 0 .2rem;
+    ul{overflow: hidden;
+      li{width: calc(33.33% - .14rem);float: left;margin-bottom: .2rem;
+        &:nth-child(3n-1){margin: 0 .21rem;}
+      }
+    }
+  }
+  .index-news{margin-top: .2rem;border: none;
+    ul{
+      li{}
+    }
+    .index-news-more{
+      p{color: #aaa;font-size: .26rem;margin-top: .2rem;text-align: center;padding-bottom: .6rem;padding-top: .4rem;
+        border-top: 1px solid #eee;
+      }
+    }
+  }
+}
+.nav{height: .8rem;background-color: #fff;  display: flex;align-items:center; justify-content:center;border-bottom: 1px solid #f7f7f7;
+  .nav-item{flex: 1;text-align: center;
+    span{display: inline-block;height: .8rem;line-height: .8rem;border-bottom: 2px #fff solid;padding: 0 3px;
+      &.choose{  border-bottom: 2px #D33C33 solid  }
+    }
+
+  }
+}
+.common_display_flex{
+  display: flex;
+}
+.common-flex-mixin-center{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.common-flex-mixin-middle{
+  display: flex;
+  align-items:center;
+}
+.common_backgroundGradient{
+  @include backgroundGradient(rgba(0,0,0,.4),rgba(0,0,0,0));
+}
+.box-top{position: relative;
+  .save{position: absolute;right: 0rem;bottom: 0rem;width: 100%;padding-bottom: .3rem;text-align: right;
+    @include backgroundGradient(rgba(0,0,0,0),rgba(0,0,0,.3));
+    p{height: .52rem;line-height: .52rem;color: #fff;display: inline-block;border: 1px solid #fff;font-size: .2rem;margin-right: .3rem;
+      padding: 0 .2rem;border-radius: .25rem;margin-top: .4rem;
+      img{width: .32rem;margin-right: .1rem;position: relative;top: .11rem;}
+    }
+  }
+}
+
+.content-new-info{padding: 0 .2rem;padding-bottom: .6rem;
+  img{max-height: 100%;}
+  font-size: .30rem;color: #666;
+  a{display: none}
+  p{margin-top: .3rem;}
+}
+::-webkit-input-placeholder  {
+  color:#ccc !important;
+}

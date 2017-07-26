@@ -1,0 +1,8 @@
+data/install_lock.txt
+data/sessions/*
+data/error
+data/cache
+uploads/
+music/node_modules
+vui/node_modules
+.idea
