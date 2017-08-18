@@ -1,0 +1,20 @@
+1.版本信息     			cordova-plugin-app-version
+2.网络连接     			cordova-plugin-network-information
+3.设备信息				cordova-plugin-device
+4.摄像头				cordova-plugin-camera
+5.二维码				cordova-plugin-barcodescanner
+6.默认键盘				ionic-plugin-keyboard
+7.代替原生webview		cordova-plugin-crosswalk-webview
+8.打开浏览器			cordova-plugin-inappbrowser
+9.退出应用				cordova-plugin-exitapp
+
+
+
+10.支付宝				cordova-plugin-alipay
+11.银联支付		
+
+
+12.下载					cordova-plugin-fastrde-downloader
+13.状态栏				cordova-plugin-statusbar
+14.请求					plugin.http.request
+http://bbs.wex5.com/thread-93542-1-1.html
