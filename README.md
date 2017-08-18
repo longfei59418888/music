@@ -1,8 +1,12 @@
-#vueItems
+# vueItems
 
 
-###一、音乐播放器（music）
-    
+### 一、音乐播放器（music）
+ 
+#####  demo
+
+http://119.29.192.69/#/find/index
+
 ##### 1.项目基本介绍
     
     前端主要技术 ： 
