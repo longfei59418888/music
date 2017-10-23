@@ -4,7 +4,7 @@
 var mongoose = require('mongoose')
 var async = require('async')
 var config = require('../../config/index')
-var db = mongoose.connect(config.DB_URL);
+var db = mongoose.connect(config.DB_URL,{useMongoClient:true});
 
 var DbOption={
     addOne : function(obj,checkField,Field,success,fail){
